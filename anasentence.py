@@ -12,6 +12,7 @@ __version__ = "0.1"
 
 # IMPORTS
 import sys
+import re
 from english_words import english_words_set
 english_words_set = list(english_words_set)
 
@@ -32,6 +33,7 @@ class ana_sent():
         """ Find anagrams for every word in the list and puts them into a dictionary. """
         self.ana_dict = {}
         for original in self.words:
+            original = re.sub("[^a-zA-Z]+", "", original)
             anagrams = []
             for other in english_words_set:
                 if sorted(original.lower()) == sorted(other.lower()):
