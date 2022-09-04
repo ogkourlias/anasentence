@@ -2,7 +2,7 @@
 
 """
     usage:
-        main.py [path to text file] or [plain text]
+        python3 main.py [path to text file] or [plain text]
 """
 
 # METADATA VARIABLES
